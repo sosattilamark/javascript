@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gameszko</title>
+
+    <script>
+        function nev(){
+            JatekosNev=document.getElementById("nevmezo").value
+            // document.writeln(JatekosNev)
+            document.getElementById("idk").innerHTML=JatekosNev
+        }
+    </script>
+</head>
+<body>
+    <h1>Gondoltam egy számot.</h1>
+    <h2>Találd ki!</h2>
+    <div id="idk">
+    Kérem a neved <input id="nevmezo"> <button onclick="nev()">ENTER</button>
+    </div>
+</body>
+</html>
