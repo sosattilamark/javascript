@@ -7,10 +7,18 @@
     <title>gameszko</title>
 
     <script>
+        function yes(){
+            document.getElementById("idk").innerHTML="Helyes! Ezt már szeretem!"
+        }
+        function no(){
+            document.getElementById("idk").innerHTML="Ez sajnálatos!!!"
+        }
+        
         function nev(){
             JatekosNev=document.getElementById("nevmezo").value
             // document.writeln(JatekosNev)
-            document.getElementById("idk").innerHTML=JatekosNev
+            document.getElementById("idk").innerHTML="Üdvözöllek: "+JatekosNev+"<br>"+
+            "AKARSZ JATSZANI BUJOCSKAT??!!"+ " <button onclick='yes()'>Igen</button>" + " <button onclick='no()'>Nem</button>"
         }
     </script>
 </head>
