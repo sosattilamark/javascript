@@ -7,12 +7,18 @@
     <title>gameszko</title>
 
     <script>
-        function yes(){
-            document.getElementById("idk").innerHTML="Helyes! Ezt már szeretem!"
+        function tipp(){
+        JatekosTipp < gondolt 
+
         }
-        
+        function yes(){
+            gondolt=Math.floor(Math.random() * 100 +1)
+            document.getElementById("idk").innerHTML=
+            gondolt
+        }
+
         function no(){
-            document.getElementById("idk").innerHTML="Ez sajnálatos!!!"
+            document.getElementById("idk").innerHTML="Owae ma, mou shindiru!"
         }
 
         function nev(){
@@ -29,5 +35,6 @@
     <div id="idk">
     Kérem a neved <input id="nevmezo"> <button onclick="nev()">ENTER</button>
     </div>
+    <div id="valasz"></div>
 </body>
 </html>
