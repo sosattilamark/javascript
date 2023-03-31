@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kattintás</title>
+    <style>
+        #cube {
+            width: 100px; height: 100px; background: darkblue; /*background-color: aqua;*/  
+        }
+        button {
+            height: 15px; width: 100px;
+        }
+    </style>
+    <script>
+        function kattintottam (){
+            var x = Math.floor(Math.random()*400)
+            var y = Math.floor(Math.random()*400)
+            divem = document.getElementById("cube").style.left=x
+            divem = document.getElementById("cube").style.left=y
+        }
+    </script>
+
+</head>
+<body>
+<p>Kattintás: <spam id="katt">0</spam></p>
+<p>Talált: <spam id="talalt">0</spam></p>
+<button onchange="kattintottam()">níomj meg</button>
+<div id="cube"></div>
+    
+</body>
+</html>
