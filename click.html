@@ -30,10 +30,23 @@
         document.addEventListener("mouseup", function(){
             kattintottam()
         },true)
-        document.getElementById("cube").addEventListener("click", function(){
-            talalt++
-            document.getElementById("talalt").innerHTML=talalt})
         
+        function cel(){
+            talalat++
+            document.getElementById("talaltID").innerHTML=talalt
+            if (talalt == 10) {
+                document.getElementById("cube").style.width=80
+                document.getElementById("cube").style.height=80
+
+            }
+            if (talalt == 30) {
+                document.getElementById("cube").style.width=40
+                document.getElementById("cube").style.height=40
+        } 
+    }
+        
+            div = document.createElement("div")
+            div.style.position="absolute"
     </script>
 
 </head>
@@ -41,7 +54,7 @@
 <p>Kattintás: <spam id="katt">0</spam></p>
 <p>Talált: <spam id="talalt">0</spam></p>
 <button onclick="kattintottam()">níomj meg</button>
-<div id="cube"></div>
+<div id="cube" onclick="cel"></div>
     
 </body>
 </html>
