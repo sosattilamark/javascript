@@ -15,9 +15,10 @@
         }
     </style>
     <script>
+        KattintasSzam=0
         function kattintottam(){
-            var k = document.getElementById("Katt").value
-            document.getElementById("Katt").innerHTML=k+1
+            KattintasSzam++
+            document.getElementById("Katt").innerHTML=KattintasSzam
         }
 
         var mozog = setInterval(function(){
@@ -26,6 +27,13 @@
             divem = document.getElementById("cube").style.left=x+("px")
             divem = document.getElementById("cube").style.top=y+("px")
         },1000)
+        document.addEventListener("mouseup", function(){
+            kattintottam()
+        },true)
+        document.getElementById("cube").addEventListener("click", function(){
+            talalt++
+            document.getElementById("talalt").innerHTML=talalt})
+        
     </script>
 
 </head>
