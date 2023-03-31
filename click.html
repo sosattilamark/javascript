@@ -8,25 +8,31 @@
     <style>
         #cube {
             width: 100px; height: 100px; background: darkblue; /*background-color: aqua;*/  
+            position: absolute;
         }
         button {
-            height: 15px; width: 100px;
+            height: 150px; width: 100px;
         }
     </style>
     <script>
-        function kattintottam (){
+        function kattintottam(){
+            var k = document.getElementById("Katt").value
+            document.getElementById("Katt").innerHTML=k+1
+        }
+
+        var mozog = setInterval(function(){
             var x = Math.floor(Math.random()*400)
             var y = Math.floor(Math.random()*400)
-            divem = document.getElementById("cube").style.left=x
-            divem = document.getElementById("cube").style.left=y
-        }
+            divem = document.getElementById("cube").style.left=x+("px")
+            divem = document.getElementById("cube").style.top=y+("px")
+        },1000)
     </script>
 
 </head>
 <body>
 <p>Kattintás: <spam id="katt">0</spam></p>
 <p>Talált: <spam id="talalt">0</spam></p>
-<button onchange="kattintottam()">níomj meg</button>
+<button onclick="kattintottam()">níomj meg</button>
 <div id="cube"></div>
     
 </body>
